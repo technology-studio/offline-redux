@@ -32,9 +32,13 @@
       "pre-push": "yarn run git-hook"
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "@txo/redux": "^2.0.1",
+    "immutability-helper": "^2.9.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@txo-peer-dep/log": "^1.0.1",
     "@txo/babel-preset": "^1.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
@@ -62,6 +66,9 @@
     ],
     "transformIgnorePatterns": [
       "/node_modules/(?!@txo).+\\.js$"
+    ],
+    "modulePathIgnorePatterns": [
+      "lib"
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",

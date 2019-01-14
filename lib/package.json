@@ -18,6 +18,8 @@
   "scripts": {
   },
   "dependencies": {
+    "@txo/redux": "^2.0.1",
+    "immutability-helper": "^2.9.0"
   },
   "peerDependencies": {
   }
