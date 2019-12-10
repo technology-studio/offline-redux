@@ -1,6 +1,6 @@
 {
   "name": "@txo/offline-redux",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Technology Studio - Offline redux",
   "main": "index.js",
   "typings": "index.d.ts",
