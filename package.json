@@ -1,8 +1,5 @@
 {
-  "name": "@txo/offline-redux",
-  "version": "1.2.1",
   "description": "Technology Studio - Offline redux",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/technology-studio/offline-redux.git"
@@ -16,48 +13,55 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean --force",
-    "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build && rm -rf node_modules/ && npm cache clean --force && npm i",
-    "test:watch": "jest --watch",
-    "updateSnapshot": "jest --updateSnapshot",
+    "test:watch": "concurrently \"yarn workspaces run build:watch\" \"jest --watch\"",
+    "pretest": "yarn workspaces run build",
     "coverage": "jest --coverage && open coverage/lcov-report/index.html || xdg-open coverage/lcov-report/index.html",
-    "lintdiff": "git diff --name-only --cached --relative | grep '\\.js$' | eslint --cache --format=node_modules/eslint-formatter-pretty",
     "lint": "eslint --format=node_modules/eslint-formatter-pretty .",
     "fixcode": "eslint --format=node_modules/eslint-formatter-pretty . --fix",
-    "git-hook": "yarn -s lint"
+    "git-hook": "yarn -s lint && yarn flow check",
+    "flow-typed:install": "scripts/flow-typed-install.sh",
+    "flow-typed:create-stub": "yarn flow-typed create-stub",
+    "sanity": "yarn lint && yarn flow check && yarn test && yarn outdated && echo 'success'"
   },
+  "workspaces": [
+    "packages/@txo/*",
+    "packages/@txo-peer-dep/*"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn run git-hook",
       "pre-push": "yarn run git-hook"
     }
   },
-  "dependencies": {
-    "@txo/redux": "^3.0.1",
-    "immutability-helper": "^3.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@txo-peer-dep/log": "^1.0.1",
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@txo-peer-dep/log": "^3.0.0",
     "@txo/babel-preset": "^1.0.0",
     "@txo/glow": "^1.2.3",
+    "@txo/log-console": "^2.0.0",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.1.0",
-    "eslint": "^6.7.2",
-    "eslint-config-txo-react": "^3.0.0",
-    "eslint-formatter-pretty": "^3.0.1",
-    "eslint-plugin-flowtype": "^4.5.2",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jest": "^23.1.1",
-    "eslint-plugin-node": "^10.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "concurrently": "^5.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-txo-react": "^4.0.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-flowtype": "^5.1.3",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.17.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-standard": "^4.0.1",
-    "flow-bin": "^0.113.0",
-    "flow-typed": "^2.6.2",
-    "husky": "^3.1.0",
-    "jest": "^24.9.0"
+    "flow-bin": "^0.127.0",
+    "flow-copy-source": "^2.0.8",
+    "flow-typed": "^3.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "rimraf": "^3.0.2"
   },
   "jest": {
     "testMatch": [
@@ -67,12 +71,11 @@
     "transformIgnorePatterns": [
       "/node_modules/(?!@txo).+\\.js$"
     ],
-    "modulePathIgnorePatterns": [
-      "lib"
-    ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "<rootDir>/__tests__/Setup.js"
+      "<rootDir>/__tests__/Config/",
+      "<rootDir>/__tests__/Setup.js",
+      "<rootDir>/__tests__/Utils/"
     ],
     "setupFiles": [
       "<rootDir>/__tests__/Setup"
