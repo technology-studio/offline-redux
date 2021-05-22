@@ -20,3 +20,9 @@ declare module '@txo/offline-redux' {
   const redux: NodeRedux<State>
   const selectOfflineModelIsOffline: (state: RootStateFragment) => boolean
 }
+
+declare module 'react-redux' {
+  interface DefaultRootState {
+    offline: State,
+  }
+}
