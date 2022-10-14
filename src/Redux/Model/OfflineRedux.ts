@@ -7,25 +7,21 @@
 
 import {
   createRedux,
-  type ActionCreator,
   type Redux,
   type ReduxHandler,
 } from '@txo/redux'
 import update from 'immutability-helper'
 
-export type Creators = {
-  setOffline: ActionCreator<Record<string, never>>,
-  unsetOffline: ActionCreator<Record<string, never>>,
+export type Handlers = {
+  setOffline: ReduxHandler<State, undefined>,
+  unsetOffline: ReduxHandler<State, undefined>,
 }
 
 export type State = {
   dateTime?: string,
 }
 
-export const offlineRedux: Redux<State, Creators> = createRedux<State, {
-  setOffline: ReduxHandler<State, Record<string, never>>,
-  unsetOffline: ReduxHandler<State, Record<string, never>>,
-}>({
+export const offlineRedux: Redux<State, State, keyof Handlers, Handlers> = createRedux<State, keyof Handlers, Handlers>({
   filter: {
     dataTime: true,
   },
