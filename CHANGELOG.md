@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/technology-studio/offline-redux/compare/v3.0.2...v3.0.3) (2022-10-25)
+
+
+### Bug fixes
+
+* **deps:** update dependency @txo/redux to ^4.0.9 ([e1ed1fc](https://github.com/technology-studio/offline-redux/commit/e1ed1fc62065dc0d335cb8c163d8d00597233bf5))
+
 ## [3.0.2](https://github.com/technology-studio/offline-redux/compare/v3.0.1...v3.0.2) (2022-10-24)
 
 
