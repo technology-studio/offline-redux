@@ -37,12 +37,16 @@
     "@txo/redux": "^4.0.25",
     "immutability-helper": "^3.1.1"
   },
+  "peerDependencies": {
+    "@txo-peer-dep/redux": "^1.0.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@txo-peer-dep/log": "^4.0.1",
+    "@txo-peer-dep/redux": "^1.0.1",
     "@txo/log-console": "^3.0.0",
     "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
