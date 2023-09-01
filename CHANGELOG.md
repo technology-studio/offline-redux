@@ -1,3 +1,10 @@
+## [3.0.9](https://github.com/technology-studio/offline-redux/compare/v3.0.8...v3.0.9) (2023-09-01)
+
+
+### Bug fixes
+
+* extend default root state with offline state ([#364](https://github.com/technology-studio/offline-redux/issues/364)) ([8338184](https://github.com/technology-studio/offline-redux/commit/83381841ff63da1f1d31f2184eb3fd53c3430f1a))
+
 ## [3.0.8](https://github.com/technology-studio/offline-redux/compare/v3.0.7...v3.0.8) (2023-08-10)
 
 
