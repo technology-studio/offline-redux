@@ -1495,6 +1495,11 @@
   dependencies:
     "@txo/config-manager" "^3.1.0"
 
+"@txo-peer-dep/redux@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@txo-peer-dep/redux/-/redux-1.0.1.tgz#dfe2205cf74e6344ccc635ed330632b84ac3028b"
+  integrity sha512-6AzIqr8wmllD2aMnwwsbk0hqNG5ldkON5faEg1pHQk03G118G7NkAuE61pUveZNX9tFdtCGfI+t24OCeXKfx4Q==
+
 "@txo/config-manager@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@txo/config-manager/-/config-manager-3.1.0.tgz#9a38d0ba2b2355f973775bafe884cdbb7225dc0d"

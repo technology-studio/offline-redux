@@ -6,6 +6,7 @@
 **/
 
 import { combineRedux } from '@txo/redux'
+import '@txo-peer-dep/redux'
 
 import {
   redux as modelRedux,
@@ -18,6 +19,12 @@ export type State = {
 
 export type RootStateFragment = {
   offline: State,
+}
+
+declare module '@txo-peer-dep/redux/lib/Model/Types' {
+  interface DefaultRootState {
+    offline: State,
+  }
 }
 
 export const redux = combineRedux({
