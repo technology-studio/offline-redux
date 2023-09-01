@@ -33,6 +33,9 @@
     "semantic-release": "semantic-release",
     "update-boilerplate-version": "./scripts/update-boilerplate-version.sh"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@txo/redux": "^4.0.25",
     "immutability-helper": "^3.1.1"
