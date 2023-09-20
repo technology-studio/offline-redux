@@ -1562,7 +1562,7 @@
   resolved "https://registry.yarnpkg.com/@txo/config-manager/-/config-manager-3.1.0.tgz#9a38d0ba2b2355f973775bafe884cdbb7225dc0d"
   integrity sha512-rYSd5Mk4URK3hs7Y5nSXst4KOidmjJPeaNkh+D/L1ndVodvKwXO/rZV00VYXpW71/KSaG1Hj83At3r4WmboKvg==
 
-"@txo/functional@^4.6.13":
+"@txo/functional@^4.6.15":
   version "4.6.15"
   resolved "https://registry.yarnpkg.com/@txo/functional/-/functional-4.6.15.tgz#f3e36be137396389140f26a695fd2b40fb3eface"
   integrity sha512-wAcKjzmRKTShSJFG7qfXg8Rfw12W65I8METllqa8iqttUmEknwrogu4Iw30LmTOH0czPkXazkxGsct6QcPPlEg==
@@ -1580,12 +1580,12 @@
   resolved "https://registry.yarnpkg.com/@txo/log/-/log-2.0.13.tgz#663100f59df18f4ddec9d85f62a20ec4b5e24b54"
   integrity sha512-fDUAJ5n+bC+/xqHFpM4Ua4nuQjWcRLTSksLR5mLXZoUlH787SUzFkpUvjFJeiGKXOqUKt35ImInLZb0oQ6yHhg==
 
-"@txo/redux@^4.0.26":
-  version "4.0.26"
-  resolved "https://registry.yarnpkg.com/@txo/redux/-/redux-4.0.26.tgz#1e42ac85d4488883c9e6ee5b82c3069c8aaf0399"
-  integrity sha512-bOch2nRAukzNylyfuggIu//U1DvUxvHVpxn91SELM1CfW/tlghrZJ07lm9zDJSNWj2m4wvadunVz4CPDN+dsHA==
+"@txo/redux@^4.0.27":
+  version "4.0.27"
+  resolved "https://registry.yarnpkg.com/@txo/redux/-/redux-4.0.27.tgz#75f4997e7febe48346fadf7fa8122f828ef1faf5"
+  integrity sha512-DV0LwqoECkKLjGlDOZ3AyYM1vhoz7vxfX2FAdSVShxNlX09by1hdg06Wfzj94/Q5ywf2P+REGfsZsgep4lBRkg==
   dependencies:
-    "@txo/functional" "^4.6.13"
+    "@txo/functional" "^4.6.15"
     constant-case "^3.0.4"
     redux "^4.2.1"
 
