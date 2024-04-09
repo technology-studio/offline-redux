@@ -44,7 +44,7 @@
     "@txo-peer-dep/redux": "^1.0.1"
   },
   "devDependencies": {
-    "@txo-peer-dep/log": "^4.0.3",
+    "@txo-peer-dep/log": "^4.0.4",
     "@txo-peer-dep/redux": "^1.0.1",
     "@txo/commitlint": "^1.0.14",
     "@txo/log-console": "^3.0.0",
