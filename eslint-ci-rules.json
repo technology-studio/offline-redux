@@ -1,0 +1,4 @@
+[
+  "@typescript-eslint/no-magic-numbers",
+  "@typescript-eslint/no-import-type-side-effects"
+]
