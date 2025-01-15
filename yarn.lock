@@ -3093,12 +3093,12 @@ eslint-config-love@^116.0.0:
     eslint-plugin-promise "^7.0.0"
     typescript-eslint "^8.15.0"
 
-eslint-config-txo-package-react@^1.0.25:
-  version "1.0.25"
-  resolved "https://registry.yarnpkg.com/eslint-config-txo-package-react/-/eslint-config-txo-package-react-1.0.25.tgz#cc71f57b1218a8e184406b4d945d8c30920d66e3"
-  integrity sha512-qIlPcwYs46aIdjYEnyym6WnXGqnjjaQEbtIrcoUD+NtSGvllPqkpyi67fOmXD0fnkH0YgHuXONbColT/gDDzvQ==
+eslint-config-txo-package-react@^1.0.26:
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/eslint-config-txo-package-react/-/eslint-config-txo-package-react-1.0.26.tgz#3f2c3a9e300037f111e0b5570b46c2885ebe4894"
+  integrity sha512-YS9TZNzW4h9Pc0+o6C52VwI/RYMK2R1duojbyfD2uwmBBImr/qbymFxDCDVoWURFjtnSL0/tzqyY821nZeg9uw==
   dependencies:
-    eslint-config-txo-typescript "^7.3.21"
+    eslint-config-txo-typescript "^7.3.22"
     eslint-config-txo-typescript-react "^3.0.6"
 
 eslint-config-txo-typescript-react@^3.0.6:
@@ -3110,7 +3110,7 @@ eslint-config-txo-typescript-react@^3.0.6:
     eslint-plugin-react "^7.37.2"
     eslint-plugin-react-hooks "^5.0.0"
 
-eslint-config-txo-typescript@^7.3.21:
+eslint-config-txo-typescript@^7.3.22:
   version "7.3.22"
   resolved "https://registry.yarnpkg.com/eslint-config-txo-typescript/-/eslint-config-txo-typescript-7.3.22.tgz#34559f4678ba1d36552dd3d4dc7b2154b654335b"
   integrity sha512-y0E8xeFK2C+pvfEWFcmUlh8SZuqJRGYl+9KZZ+/6LS5dTU8TfTTaz5mdsF8GQ5Thv4nDfXjgQSXhPjpszZvwow==
